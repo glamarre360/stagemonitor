@@ -523,6 +523,14 @@ public class RequestMonitor {
 		return active;
 	}
 
+	public RequestInformation<? extends RequestTrace> getRequestInfo(){
+		return request.get();
+	}
+
+	public void setRequestInfo(RequestInformation<? extends RequestTrace> info){
+		request.set(info);
+	}
+
 	/**
 	 * @return the {@link RequestTrace} of the current request
 	 * @deprecated use <code>RequestMonitor.get().getRequestTrace()</code> or
